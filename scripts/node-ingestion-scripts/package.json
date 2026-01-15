@@ -1,0 +1,15 @@
+{
+  "name": "ndjson-mysql-ingestion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "NDJSON ingestion into MySQL staging tables without LOAD DATA LOCAL INFILE",
+  "scripts": {
+    "ingest:vehicle": "node src/ingest.js --type vehicle --file ./data/vehicles.ndjson",
+    "ingest:part": "node src/ingest.js --type part --file ./data/parts.ndjson"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mysql2": "^3.11.0"
+  }
+}
